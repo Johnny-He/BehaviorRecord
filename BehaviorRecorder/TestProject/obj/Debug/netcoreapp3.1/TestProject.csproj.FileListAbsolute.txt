@@ -1,0 +1,13 @@
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\bin\Debug\netcoreapp3.1\TestProject.exe
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\bin\Debug\netcoreapp3.1\TestProject.deps.json
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\bin\Debug\netcoreapp3.1\TestProject.runtimeconfig.json
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\bin\Debug\netcoreapp3.1\TestProject.runtimeconfig.dev.json
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\bin\Debug\netcoreapp3.1\TestProject.dll
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\bin\Debug\netcoreapp3.1\TestProject.pdb
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.csprojAssemblyReference.cache
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.AssemblyInfoInputs.cache
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.AssemblyInfo.cs
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.csproj.CoreCompileInputs.cache
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.dll
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.pdb
+D:\BehaviorRecorder\BehaviorRecorder\TestProject\obj\Debug\netcoreapp3.1\TestProject.genruntimeconfig.cache

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6M3ZhK/FL5lsQxUhUa0F+Nyvk/i+Bga4aLG0yP2gNED0vkr0IxOYOJkvUrolOparYrk6XYK+zTmBrUu5vzeYFA==",
+  "success": true,
+  "projectFilePath": "D:\\BehaviorRecorder\\BehaviorRecorder\\TestProject\\TestProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\johnny.he27\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
