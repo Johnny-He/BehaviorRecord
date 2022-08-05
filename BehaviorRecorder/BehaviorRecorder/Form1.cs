@@ -5,13 +5,13 @@ using BehaviorRecorder.Services;
 
 namespace BehaviorRecorder
 {
-    
     public partial class Form1 : Form
     {
-        public MouseRecorder BehaviorMouseRecorder = new MouseRecorder();
-       
-        public Form1()
+        private readonly MouseRecorder _behaviorMouseRecorder;
+
+        public Form1(MouseRecorder behaviorMouseRecorder)
         {
+            _behaviorMouseRecorder = behaviorMouseRecorder;
             InitializeComponent();
         }
 
@@ -23,25 +23,23 @@ namespace BehaviorRecorder
             //todo record mouse click event
             //todo stop hot key
             //this.MouseClick += new MouseEventHandler(this);
-            Task.Run(() => BehaviorMouseRecorder.Record());
+            Task.Run(() => _behaviorMouseRecorder.Record());
         }
 
         private void StopRecord_Click(object sender, EventArgs e)
         {
-            BehaviorMouseRecorder.StopRecord();
-            //todo GetRecord from Repo 
-            var printRecord = BehaviorMouseRecorder.PrintRecord();
-
-            foreach (var point in printRecord)
+            _behaviorMouseRecorder.StopRecord();
+            
+            var behaviorRecord = _behaviorMouseRecorder.GetRecord();
+            foreach (var record in behaviorRecord.BehaviorWithTimeSpans)
             {
-                UserBehaviorLog.Items.Add($"Test X: {point.X}, Y: {point.Y}");
+                UserBehaviorLog.Items.Add($"Points X: {record.Points.X}, Y: {record.Points.Y}, occur on = {record.Intervals}");
             }
         }
 
         private void Play_Click(object sender, EventArgs e)
         {
-            BehaviorMouseRecorder.Play(null);
+            _behaviorMouseRecorder.Play(null);
         }
     }
 }
-
