@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Threading;
+using BehaviorRecorder.Enums;
 using BehaviorRecorder.Models;
 
 namespace BehaviorRecorder.Services
@@ -10,46 +13,63 @@ namespace BehaviorRecorder.Services
         private bool _recordFlag;
         private List<Point> _cursorHistory = new List<Point>();
 
+        private BehaviorRecord _behaviorRecord = new BehaviorRecord()
+        {
+            BehaviorWithTimeSpans = new List<BehaviorWithTimeSpan>()
+        };
+
         [DllImport("user32.dll")]
         public static extern bool GetCursorPos(out Point lpPoint);
 
         [DllImport("user32.dll")]
         public static extern bool SetCursorPos(int X, int Y);
 
-        [DllImport("user32.dll")]
-        public static extern int GetKeyboardState(byte[] keystate);
+        // [DllImport("user32.dll")]
+        // public static extern int GetKeyboardState(byte[] keystate);
+        //
+        // [DllImport("user32.dll")]
+        // public static extern int SetKeyboardState(byte[] keystate);
+        //
+        // [DllImport("user32.dll")]
+        // static extern void mouse_event(MouseEventFlag flags, int dx, int dy, uint data, UIntPtr extraInfo);
 
-        [DllImport("user32.dll")]
-        public static extern int SetKeyboardState(byte[] keystate);
-
-        [DllImport("user32.dll")]
-        static extern void mouse_event(MouseEventFlag flags, int dx, int dy, uint data, UIntPtr extraInfo);
         public void Play(BehaviorRecord behaviorRecord)
         {
-            foreach (Point point in _cursorHistory)
+            foreach (var record in _behaviorRecord.BehaviorWithTimeSpans)
             {
-                SetCursorPos(point.X, point.Y);
-                System.Threading.Thread.Sleep(10);
+                Thread.Sleep(record.Intervals);
+                SetCursorPos(record.Points.X, record.Points.Y);
             }
         }
 
         public void Record()
         {
             _recordFlag = true;
-            Point prev_pos;
+            var prev_pos = new Point
+            {
+                X = 0,
+                Y = 0
+            };
             Point current_pos;
-
-            prev_pos.X = 0;
-            prev_pos.Y = 0;
-
+            stopwatch.Start();
+            var stopwatch = new Stopwatch();
+            var lastTimeSpan = new TimeSpan();
+            
             while (_recordFlag)
             {
                 if (GetCursorPos(out current_pos))
                 {
-
                     if ((current_pos.X != prev_pos.X) || (current_pos.Y != prev_pos.Y))
                     {
                         _cursorHistory.Add(current_pos);
+                        var stopwatchElapsed = stopwatch.Elapsed;
+                        _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithTimeSpan
+                        {
+                            BehaviorAction = BehaviorAction.MouseMove,
+                            Intervals = stopwatchElapsed - lastTimeSpan,
+                            Points = current_pos
+                        });
+                        lastTimeSpan = stopwatchElapsed;
                     }
 
                     prev_pos.X = current_pos.X;
@@ -58,29 +78,14 @@ namespace BehaviorRecorder.Services
             }
         }
 
-        public List<Point> PrintRecord()
+        public BehaviorRecord PrintRecord()
         {
-            return _cursorHistory;
+            return _behaviorRecord;
         }
 
         public void StopRecord()
         {
             _recordFlag = false;
-            foreach (var point in _cursorHistory)
-            {
-                // UserBehaviorLog.Items.Add($"Test X: {point.X}, Y: {point.Y}");
-            }
         }
-    }
-
-    public class BehaviorRecord
-    {
-        public List<BehaviorWithTimeSpan> BehaviorWithTimeSpans { get; set; }
-    }
-
-    public class BehaviorWithTimeSpan
-    {
-        public string Action { get; set; }
-        public DateTime Time { get; set; }
     }
 }
