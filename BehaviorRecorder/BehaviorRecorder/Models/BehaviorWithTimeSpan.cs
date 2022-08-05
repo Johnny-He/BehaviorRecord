@@ -8,5 +8,6 @@ namespace BehaviorRecorder.Models
         public BehaviorAction BehaviorAction { get; set; }
         public TimeSpan Intervals { get; set; }
         public Point Points { get; set; }
+        public char PressKey { get; set; }
     }
 }

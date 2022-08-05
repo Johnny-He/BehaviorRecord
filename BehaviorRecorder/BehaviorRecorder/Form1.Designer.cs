@@ -33,6 +33,7 @@ namespace BehaviorRecorder
             this.UserBehaviorLog = new System.Windows.Forms.ListBox();
             this.StopRecord = new System.Windows.Forms.Button();
             this.Play = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Record
@@ -43,7 +44,7 @@ namespace BehaviorRecorder
             this.Record.TabIndex = 1;
             this.Record.Text = "Record";
             this.Record.UseVisualStyleBackColor = true;
-            this.Record.Click += new System.EventHandler(this.Record_Click);
+            this.Record.Click += new System.EventHandler(this.StartRecord_Click);
             // 
             // UserBehaviorLog
             // 
@@ -53,6 +54,9 @@ namespace BehaviorRecorder
             this.UserBehaviorLog.Name = "UserBehaviorLog";
             this.UserBehaviorLog.Size = new System.Drawing.Size(383, 319);
             this.UserBehaviorLog.TabIndex = 4;
+            // //This selects and highlights the last line
+            // this.UserBehaviorLog.Items.Add(("Hello", "1"));
+            // this.UserBehaviorLog.SetSelected(this.UserBehaviorLog.Items.Count - 1, true);
             // 
             // StopRecord
             // 
@@ -74,11 +78,22 @@ namespace BehaviorRecorder
             this.Play.UseVisualStyleBackColor = true;
             this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(481, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 27);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.StopRecord);
             this.Controls.Add(this.UserBehaviorLog);
@@ -95,6 +110,7 @@ namespace BehaviorRecorder
         private System.Windows.Forms.ListBox UserBehaviorLog;
         private System.Windows.Forms.Button StopRecord;
         private System.Windows.Forms.Button Play;
+        private System.Windows.Forms.Button button1;
     }
 }
 
