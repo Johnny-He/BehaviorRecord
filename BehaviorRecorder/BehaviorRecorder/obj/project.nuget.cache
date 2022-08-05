@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "aMiOVU4VthuYx2mLpRPfgNA5QGYc/FRV8CC1YI+to+LMDUCZol2ydxtZ1caP6ME4n3gGB1VU6xXy3RHuJlFuBQ==",
+  "dgSpecHash": "o01Djz7XXkWU5Rcf4j3YBn0L/Zq1ngq5oBf5C0RUiUCpMhxzrMHyLaz/7iFhZGtgZIT2HNY0KS5hMzvxyAcHNg==",
   "success": true,
-  "projectFilePath": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\何信鋕\\.nuget\\packages\\mousekeyhook\\5.6.0\\mousekeyhook.5.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MouseKeyHook 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MouseKeyHook",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

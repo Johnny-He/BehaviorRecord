@@ -1,33 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj": {}
+    "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj": {}
   },
   "projects": {
-    "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj": {
+    "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
+        "projectUniqueName": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
         "projectName": "BehaviorRecorder",
-        "projectPath": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
-        "packagesPath": "C:\\Users\\johnny.he27\\.nuget\\packages\\",
-        "outputPath": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\obj\\",
+        "projectPath": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
+        "packagesPath": "C:\\Users\\何信鋕\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\johnny.he27\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\何信鋕\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.coreop.net/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MouseKeyHook": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

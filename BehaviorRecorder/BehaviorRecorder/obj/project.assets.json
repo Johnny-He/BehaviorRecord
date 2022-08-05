@@ -1,41 +1,58 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "MouseKeyHook/5.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Gma.System.MouseKeyHook.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Gma.System.MouseKeyHook.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MouseKeyHook/5.6.0": {
+      "sha512": "xDNM10IfRED0+k78O9VvY0/suqeNJVg6GttEFPP/N4CEMujwVrfU+UatFN7Rb+gdjqIfhKblz7/nG3pUQmHaJg==",
+      "type": "package",
+      "path": "mousekeyhook/5.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Gma.System.MouseKeyHook.dll",
+        "mousekeyhook.5.6.0.nupkg.sha512",
+        "mousekeyhook.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "MouseKeyHook >= 5.6.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\johnny.he27\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\何信鋕\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
+      "projectUniqueName": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
       "projectName": "BehaviorRecorder",
-      "projectPath": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
-      "packagesPath": "C:\\Users\\johnny.he27\\.nuget\\packages\\",
-      "outputPath": "D:\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\obj\\",
+      "projectPath": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder.csproj",
+      "packagesPath": "C:\\Users\\何信鋕\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\BehaviorRecorder\\BehaviorRecorder\\BehaviorRecorder\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\johnny.he27\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\何信鋕\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.coreop.net/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -53,6 +70,12 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "MouseKeyHook": {
+            "target": "Package",
+            "version": "[5.6.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -71,8 +94,20 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MouseKeyHook 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MouseKeyHook",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
