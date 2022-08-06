@@ -1,7 +1,7 @@
 ﻿
 namespace BehaviorRecorder
 {
-    partial class Form1
+    partial class BehaviorRecorderUi
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,13 +34,14 @@ namespace BehaviorRecorder
             this.StopRecord = new System.Windows.Forms.Button();
             this.Play = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.SaveRecord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Record
             // 
-            this.Record.Location = new System.Drawing.Point(411, 41);
+            this.Record.Location = new System.Drawing.Point(352, 41);
             this.Record.Name = "Record";
-            this.Record.Size = new System.Drawing.Size(75, 23);
+            this.Record.Size = new System.Drawing.Size(87, 23);
             this.Record.TabIndex = 1;
             this.Record.Text = "Record";
             this.Record.UseVisualStyleBackColor = true;
@@ -52,17 +53,14 @@ namespace BehaviorRecorder
             this.UserBehaviorLog.ItemHeight = 15;
             this.UserBehaviorLog.Location = new System.Drawing.Point(22, 31);
             this.UserBehaviorLog.Name = "UserBehaviorLog";
-            this.UserBehaviorLog.Size = new System.Drawing.Size(383, 319);
+            this.UserBehaviorLog.Size = new System.Drawing.Size(315, 214);
             this.UserBehaviorLog.TabIndex = 4;
-            // //This selects and highlights the last line
-            // this.UserBehaviorLog.Items.Add(("Hello", "1"));
-            // this.UserBehaviorLog.SetSelected(this.UserBehaviorLog.Items.Count - 1, true);
             // 
             // StopRecord
             // 
-            this.StopRecord.Location = new System.Drawing.Point(411, 97);
+            this.StopRecord.Location = new System.Drawing.Point(445, 41);
             this.StopRecord.Name = "StopRecord";
-            this.StopRecord.Size = new System.Drawing.Size(122, 23);
+            this.StopRecord.Size = new System.Drawing.Size(120, 23);
             this.StopRecord.TabIndex = 5;
             this.StopRecord.Text = "StopRecord(F4)";
             this.StopRecord.UseVisualStyleBackColor = true;
@@ -70,9 +68,9 @@ namespace BehaviorRecorder
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(412, 163);
+            this.Play.Location = new System.Drawing.Point(352, 105);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(121, 27);
+            this.Play.Size = new System.Drawing.Size(87, 27);
             this.Play.TabIndex = 6;
             this.Play.Text = "Play";
             this.Play.UseVisualStyleBackColor = true;
@@ -80,7 +78,7 @@ namespace BehaviorRecorder
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(481, 281);
+            this.button1.Location = new System.Drawing.Point(352, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 27);
             this.button1.TabIndex = 7;
@@ -88,17 +86,28 @@ namespace BehaviorRecorder
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // SaveRecord
+            // 
+            this.SaveRecord.Location = new System.Drawing.Point(445, 105);
+            this.SaveRecord.Name = "SaveRecord";
+            this.SaveRecord.Size = new System.Drawing.Size(121, 27);
+            this.SaveRecord.TabIndex = 8;
+            this.SaveRecord.Text = "SaveRecord(F6)";
+            this.SaveRecord.UseVisualStyleBackColor = true;
+            this.SaveRecord.Click += new System.EventHandler(this.SaveRecord_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(604, 280);
+            this.Controls.Add(this.SaveRecord);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.StopRecord);
             this.Controls.Add(this.UserBehaviorLog);
             this.Controls.Add(this.Record);
-            this.Name = "Form1";
+            this.Name = "BehaviorRecorderUi";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -111,6 +120,7 @@ namespace BehaviorRecorder
         private System.Windows.Forms.Button StopRecord;
         private System.Windows.Forms.Button Play;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SaveRecord;
     }
 }
 

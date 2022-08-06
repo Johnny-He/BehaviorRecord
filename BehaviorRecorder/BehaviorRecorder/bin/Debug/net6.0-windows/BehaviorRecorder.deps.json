@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BehaviorRecorder/1.0.0": {
+        "dependencies": {
+          "MouseKeyHook": "5.6.0",
+          "Newtonsoft.Json": "13.0.2-beta1"
+        },
+        "runtime": {
+          "BehaviorRecorder.dll": {}
+        }
+      },
+      "MouseKeyHook/5.6.0": {
+        "runtime": {
+          "lib/net40/Gma.System.MouseKeyHook.dll": {
+            "assemblyVersion": "5.6.130.0",
+            "fileVersion": "5.6.130.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.2-beta1": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.26916"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BehaviorRecorder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MouseKeyHook/5.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xDNM10IfRED0+k78O9VvY0/suqeNJVg6GttEFPP/N4CEMujwVrfU+UatFN7Rb+gdjqIfhKblz7/nG3pUQmHaJg==",
+      "path": "mousekeyhook/5.6.0",
+      "hashPath": "mousekeyhook.5.6.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.2-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lrHT3bmqM13QHvgtj2Y30BCRsq6lX07klW5tScx2B7ihqWeG6aVXrHxVALN34+boed9ybVtlRFLOuKD44Xuttg==",
+      "path": "newtonsoft.json/13.0.2-beta1",
+      "hashPath": "newtonsoft.json.13.0.2-beta1.nupkg.sha512"
+    }
+  }
+}

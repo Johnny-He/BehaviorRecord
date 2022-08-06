@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BehaviorRecorder.Models;
 using BehaviorRecorder.Services;
 
 namespace BehaviorRecorder
 {
-    public partial class Form1 : Form
+    public partial class BehaviorRecorderUi : Form
     {
-        private readonly MouseRecorder _behaviorMouseRecorder;
+        private readonly MouseRecorder _behaviorRecorder;
+        private BehaviorRecord _behaviorRecord;
 
-        public Form1(MouseRecorder behaviorMouseRecorder)
+        public BehaviorRecorderUi(MouseRecorder behaviorRecorder)
         {
-            _behaviorMouseRecorder = behaviorMouseRecorder;
+            _behaviorRecorder = behaviorRecorder;
             this.KeyPreview = true;
             this.KeyDown += TriggerRecorderEvent;
             InitializeComponent();
@@ -23,22 +25,19 @@ namespace BehaviorRecorder
             //Invoke(new Action(test));
 
             PrintLog("Record Start !!");
-            Task.Run(() => { _behaviorMouseRecorder.Record(); });
+            Task.Run(() => { _behaviorRecorder.Record(); });
         }
 
         private void StopRecord_Click(object sender, EventArgs e)
         {
-            _behaviorMouseRecorder.StopRecord();
-
-            var behaviorRecord = _behaviorMouseRecorder.GetRecord();
-            foreach (var record in behaviorRecord.BehaviorWithTimeSpans)
+            _behaviorRecord = _behaviorRecorder.StopRecord();
+            foreach (var record in _behaviorRecord.BehaviorWithTimeSpans)
             {
                 PrintLog(
-                    $"Points X: {record.Points.X}, Y: {record.Points.Y}, action = {record.BehaviorAction.ToString()}, occur on = {record.Intervals}");
+                    $"Points X: {record.Points.X}, Y: {record.Points.Y}, action = {record.BehaviorAction.ToString()}, occur on = {record.Interval}");
             }
 
             PrintLog($"Record Stop !!");
-            //This selects and highlights the last line
         }
 
 
@@ -46,22 +45,26 @@ namespace BehaviorRecorder
         {
             switch (e.KeyCode.ToString())
             {
-                case "F5":
-                    Play_Click(sender, e);
+                case "F3":
+                    StartRecord_Click(sender, e);
                     break;
                 case "F4":
                     StopRecord_Click(sender, e);
                     break;
-                case "F3":
-                    StartRecord_Click(sender, e);
+                case "F5":
+                    Play_Click(sender, e);
+                    break;
+                case "F6":
+                    SaveRecord_Click(sender, e);
                     break;
             }
         }
 
         private void Play_Click(object sender, EventArgs e)
         {
-            _behaviorMouseRecorder.Play(null);
-            PrintLog("Playing Recorder !!");
+            PrintLog("Playing Recorder Start !!");
+            _behaviorRecorder.Play(null);
+            PrintLog("Playing Recorder End !!");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,6 +76,12 @@ namespace BehaviorRecorder
         {
             UserBehaviorLog.Items.Add(message);
             UserBehaviorLog.SetSelected(UserBehaviorLog.Items.Count - 1, true);
+        }
+
+        private void SaveRecord_Click(object sender, EventArgs e)
+        {
+            var formPopup = new SaveRecordPopup(_behaviorRecorder, _behaviorRecord);
+            formPopup.Show(this); // if you need non-modal window
         }
     }
 }

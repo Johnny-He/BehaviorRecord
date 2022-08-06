@@ -14,7 +14,7 @@ namespace BehaviorRecorder
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(new Services.MouseRecorder()));
+            Application.Run(new BehaviorRecorderUi(new Services.MouseRecorder()));
         }
     }
 }

@@ -4,6 +4,7 @@ namespace BehaviorRecorder.Models
 {
     public class BehaviorRecord
     {
-        public List<BehaviorWithTimeSpan> BehaviorWithTimeSpans { get; set; }
+        public string Name{ get; set; }
+        public List<BehaviorWithInterval> BehaviorWithTimeSpans { get; set; }
     }
 }

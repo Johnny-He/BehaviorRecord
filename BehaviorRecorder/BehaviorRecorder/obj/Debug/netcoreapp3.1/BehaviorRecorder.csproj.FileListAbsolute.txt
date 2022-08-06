@@ -21,7 +21,6 @@ C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\bin\Debug\netcore
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\bin\Debug\netcoreapp3.1\BehaviorRecorder.dll
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\bin\Debug\netcoreapp3.1\BehaviorRecorder.pdb
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.csproj.AssemblyReference.cache
-C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.Form1.resources
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.csproj.GenerateResource.cache
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.AssemblyInfoInputs.cache
@@ -33,3 +32,5 @@ C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcore
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\bin\Debug\netcoreapp3.1\Gma.System.MouseKeyHook.dll
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.csproj.CopyComplete
 C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.SaveRecordPopup.resources
+C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\obj\Debug\netcoreapp3.1\BehaviorRecorder.BehaviorRecorderUi.resources
+C:\Projects\BehaviorRecorder\BehaviorRecorder\BehaviorRecorder\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

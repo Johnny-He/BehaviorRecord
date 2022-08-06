@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using BehaviorRecorder.Enums;
 using BehaviorRecorder.Helpers;
 using BehaviorRecorder.Models;
+using BehaviorRecorder.Repositories;
 using Gma.System.MouseKeyHook;
 
 namespace BehaviorRecorder.Services
@@ -17,22 +18,25 @@ namespace BehaviorRecorder.Services
 
         private readonly BehaviorRecord _behaviorRecord = new BehaviorRecord()
         {
-            BehaviorWithTimeSpans = new List<BehaviorWithTimeSpan>()
+            BehaviorWithTimeSpans = new List<BehaviorWithInterval>()
         };
 
         private readonly Stopwatch _stopwatch;
         private TimeSpan _lastTimeSpan;
         private readonly IKeyboardMouseEvents _globalHook;
+        private BehaviorRecorderRepository _behaviorRecorderRepository;
 
 
         public MouseRecorder()
         {
             _globalHook = Hook.GlobalEvents();
-            //shouldn't in constructor
+            //todo when stop record, need to cancel global hook
             _globalHook.MouseClick += RecordMouseClickEvent;
+            //shouldn't in constructor
             // _globalHook.KeyPress += RecordKeyPressEvent;
             _stopwatch = new Stopwatch();
             _lastTimeSpan = new TimeSpan();
+            _behaviorRecorderRepository = new BehaviorRecorderRepository();
         }
 
      
@@ -41,7 +45,7 @@ namespace BehaviorRecorder.Services
         {
             foreach (var record in _behaviorRecord.BehaviorWithTimeSpans.ToList())
             {
-                Thread.Sleep(record.Intervals);
+                Thread.Sleep(record.Interval);
                 switch (record.BehaviorAction)
                 {
                     case BehaviorAction.MouseMove:
@@ -68,7 +72,8 @@ namespace BehaviorRecorder.Services
                 Y = 0
             };
             Point current_pos;
-
+            
+            
             _stopwatch.Start();
             while (_isRecording)
             {
@@ -77,10 +82,10 @@ namespace BehaviorRecorder.Services
                     if ((current_pos.X != prev_pos.X) || (current_pos.Y != prev_pos.Y))
                     {
                         var stopwatchElapsed = _stopwatch.Elapsed;
-                        _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithTimeSpan
+                        _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithInterval
                         {
                             BehaviorAction = BehaviorAction.MouseMove,
-                            Intervals = stopwatchElapsed - _lastTimeSpan,
+                            Interval = stopwatchElapsed - _lastTimeSpan,
                             Points = current_pos
                         });
                         _lastTimeSpan = stopwatchElapsed;
@@ -96,10 +101,10 @@ namespace BehaviorRecorder.Services
         {
             if (_isRecording)
             {
-                _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithTimeSpan
+                _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithInterval
                 {
                     BehaviorAction = BehaviorAction.KeyPress,
-                    Intervals = _stopwatch.Elapsed - _lastTimeSpan,
+                    Interval = _stopwatch.Elapsed - _lastTimeSpan,
                     PressKey = e.KeyChar,
                 });
             }
@@ -110,10 +115,10 @@ namespace BehaviorRecorder.Services
         {
             if (_isRecording && WindowsBehaviorHelper.GetCursorPos(out var point))
             {
-                _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithTimeSpan
+                _behaviorRecord.BehaviorWithTimeSpans.Add(new BehaviorWithInterval
                 {
                     BehaviorAction = BehaviorAction.MouseClick,
-                    Intervals = _stopwatch.Elapsed - _lastTimeSpan,
+                    Interval = _stopwatch.Elapsed - _lastTimeSpan,
                     Points = new Point
                     {
                         X = point.X,
@@ -128,10 +133,16 @@ namespace BehaviorRecorder.Services
             return _behaviorRecord;
         }
 
-        public void StopRecord()
+        public BehaviorRecord StopRecord()
         {
             _stopwatch.Stop();
             _isRecording = false;
+            return _behaviorRecord;
+        }
+
+        public void SaveRecord(BehaviorRecord behaviorRecord)
+        {
+            BehaviorRecorderRepository.SaveRecord(behaviorRecord);
         }
     }
 }

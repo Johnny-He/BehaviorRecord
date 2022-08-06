@@ -1,0 +1,628 @@
+[
+  {
+    "BehaviorWithTimeSpans": [
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0001095",
+        "Points": {
+          "X": 1084,
+          "Y": 414
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0372642",
+        "Points": {
+          "X": 1081,
+          "Y": 413
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079194",
+        "Points": {
+          "X": 1077,
+          "Y": 404
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079923",
+        "Points": {
+          "X": 1074,
+          "Y": 393
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079975",
+        "Points": {
+          "X": 1068,
+          "Y": 379
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080672",
+        "Points": {
+          "X": 1063,
+          "Y": 366
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079276",
+        "Points": {
+          "X": 1058,
+          "Y": 356
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080011",
+        "Points": {
+          "X": 1054,
+          "Y": 349
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080007",
+        "Points": {
+          "X": 1053,
+          "Y": 342
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080261",
+        "Points": {
+          "X": 1054,
+          "Y": 337
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080140",
+        "Points": {
+          "X": 1062,
+          "Y": 329
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079880",
+        "Points": {
+          "X": 1070,
+          "Y": 325
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080709",
+        "Points": {
+          "X": 1084,
+          "Y": 320
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079158",
+        "Points": {
+          "X": 1099,
+          "Y": 318
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079805",
+        "Points": {
+          "X": 1124,
+          "Y": 318
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079999",
+        "Points": {
+          "X": 1138,
+          "Y": 318
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079995",
+        "Points": {
+          "X": 1159,
+          "Y": 318
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0081634",
+        "Points": {
+          "X": 1186,
+          "Y": 318
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079566",
+        "Points": {
+          "X": 1203,
+          "Y": 323
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079055",
+        "Points": {
+          "X": 1217,
+          "Y": 334
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080027",
+        "Points": {
+          "X": 1221,
+          "Y": 340
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079741",
+        "Points": {
+          "X": 1224,
+          "Y": 348
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080053",
+        "Points": {
+          "X": 1225,
+          "Y": 359
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079865",
+        "Points": {
+          "X": 1225,
+          "Y": 369
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080176",
+        "Points": {
+          "X": 1221,
+          "Y": 380
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080116",
+        "Points": {
+          "X": 1212,
+          "Y": 389
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080017",
+        "Points": {
+          "X": 1202,
+          "Y": 397
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0083021",
+        "Points": {
+          "X": 1186,
+          "Y": 403
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0076809",
+        "Points": {
+          "X": 1172,
+          "Y": 407
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080112",
+        "Points": {
+          "X": 1159,
+          "Y": 410
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079805",
+        "Points": {
+          "X": 1143,
+          "Y": 410
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080264",
+        "Points": {
+          "X": 1131,
+          "Y": 410
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080282",
+        "Points": {
+          "X": 1117,
+          "Y": 408
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080060",
+        "Points": {
+          "X": 1105,
+          "Y": 402
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079348",
+        "Points": {
+          "X": 1099,
+          "Y": 396
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080192",
+        "Points": {
+          "X": 1093,
+          "Y": 387
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080017",
+        "Points": {
+          "X": 1093,
+          "Y": 378
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080099",
+        "Points": {
+          "X": 1093,
+          "Y": 369
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079700",
+        "Points": {
+          "X": 1095,
+          "Y": 363
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080268",
+        "Points": {
+          "X": 1104,
+          "Y": 356
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079725",
+        "Points": {
+          "X": 1114,
+          "Y": 354
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080691",
+        "Points": {
+          "X": 1126,
+          "Y": 351
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080816",
+        "Points": {
+          "X": 1138,
+          "Y": 350
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0078957",
+        "Points": {
+          "X": 1154,
+          "Y": 350
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079602",
+        "Points": {
+          "X": 1167,
+          "Y": 350
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080184",
+        "Points": {
+          "X": 1185,
+          "Y": 354
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080003",
+        "Points": {
+          "X": 1201,
+          "Y": 363
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0081568",
+        "Points": {
+          "X": 1211,
+          "Y": 371
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0078194",
+        "Points": {
+          "X": 1218,
+          "Y": 378
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080160",
+        "Points": {
+          "X": 1220,
+          "Y": 388
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079918",
+        "Points": {
+          "X": 1220,
+          "Y": 398
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080005",
+        "Points": {
+          "X": 1219,
+          "Y": 409
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080239",
+        "Points": {
+          "X": 1211,
+          "Y": 422
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080521",
+        "Points": {
+          "X": 1201,
+          "Y": 434
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079187",
+        "Points": {
+          "X": 1187,
+          "Y": 444
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0081426",
+        "Points": {
+          "X": 1170,
+          "Y": 451
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079275",
+        "Points": {
+          "X": 1148,
+          "Y": 458
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0084234",
+        "Points": {
+          "X": 1131,
+          "Y": 465
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0083175",
+        "Points": {
+          "X": 1107,
+          "Y": 471
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0072416",
+        "Points": {
+          "X": 1083,
+          "Y": 475
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080113",
+        "Points": {
+          "X": 1069,
+          "Y": 478
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079831",
+        "Points": {
+          "X": 1059,
+          "Y": 479
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0080238",
+        "Points": {
+          "X": 1052,
+          "Y": 479
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079888",
+        "Points": {
+          "X": 1050,
+          "Y": 479
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0079458",
+        "Points": {
+          "X": 1049,
+          "Y": 479
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0160039",
+        "Points": {
+          "X": 1048,
+          "Y": 479
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0241095",
+        "Points": {
+          "X": 1050,
+          "Y": 476
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0081226",
+        "Points": {
+          "X": 1051,
+          "Y": 475
+        },
+        "PressKey": "\u0000"
+      },
+      {
+        "BehaviorAction": 0,
+        "Intervals": "00:00:00.0078304",
+        "Points": {
+          "X": 1052,
+          "Y": 474
+        },
+        "PressKey": "\u0000"
+      }
+    ],
+    "Name": null
+  }
+]
