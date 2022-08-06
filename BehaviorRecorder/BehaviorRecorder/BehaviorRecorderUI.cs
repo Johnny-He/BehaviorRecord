@@ -17,6 +17,7 @@ namespace BehaviorRecorder
             this.KeyPreview = true;
             this.KeyDown += TriggerRecorderEvent;
             InitializeComponent();
+            
         }
 
         private void StartRecord_Click(object sender, System.EventArgs e)
