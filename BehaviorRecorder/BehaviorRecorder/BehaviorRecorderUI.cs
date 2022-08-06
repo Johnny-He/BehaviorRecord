@@ -3,17 +3,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using BehaviorRecorder.Models;
+using BehaviorRecorder.Services;
 
 namespace BehaviorRecorder
 {
     public partial class BehaviorRecorderUi : Form
     {
         private readonly Services.BehaviorRecorder _behaviorRecorder;
+        private readonly BehaviorPlayer _behaviorPlayer;
         private BehaviorRecord _behaviorRecord;
 
-        public BehaviorRecorderUi(Services.BehaviorRecorder behaviorRecorder)
+        public BehaviorRecorderUi(Services.BehaviorRecorder behaviorRecorder, BehaviorPlayer behaviorPlayer)
         {
             _behaviorRecorder = behaviorRecorder;
+            _behaviorPlayer = behaviorPlayer;
             KeyPreview = true;
             KeyDown += TriggerRecorderEvent;
 
@@ -28,7 +31,7 @@ namespace BehaviorRecorder
             //Invoke(new Action(test));
 
             PrintLog("Record Start !!");
-            Task.Run(() => { _behaviorRecorder.Record(); });
+            Task.Run(() => { _behaviorRecorder.StartRecord(); });
         }
 
         private void StopRecord_Click(object sender, EventArgs e)
@@ -67,7 +70,7 @@ namespace BehaviorRecorder
         private void Play_Click(object sender, EventArgs e)
         {
             PrintLog("Playing Recorder Start !!");
-            _behaviorRecorder.Play(RecordHistory.SelectedItem.ToString());
+            _behaviorPlayer.Play(RecordHistory.SelectedItem.ToString());
             PrintLog("Playing Recorder End !!");
         }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using BehaviorRecorder.Services;
 
 namespace BehaviorRecorder
 {
@@ -14,7 +15,7 @@ namespace BehaviorRecorder
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BehaviorRecorderUi(new Services.BehaviorRecorder()));
+            Application.Run(new BehaviorRecorderUi(new Services.BehaviorRecorder(),new BehaviorPlayer()));
         }
     }
 }

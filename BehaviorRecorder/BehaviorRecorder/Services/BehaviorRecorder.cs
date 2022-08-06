@@ -63,7 +63,7 @@ namespace BehaviorRecorder.Services
             }
         }
 
-        public void Record()
+        public void StartRecord()
         {
             _isRecording = true;
             var prev_pos = new Point
