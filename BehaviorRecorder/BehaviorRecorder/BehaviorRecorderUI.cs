@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using BehaviorRecorder.Models;
-using BehaviorRecorder.Services;
 
 namespace BehaviorRecorder
 {
     public partial class BehaviorRecorderUi : Form
     {
-        private readonly MouseRecorder _behaviorRecorder;
+        private readonly Services.BehaviorRecorder _behaviorRecorder;
         private BehaviorRecord _behaviorRecord;
 
-        public BehaviorRecorderUi(MouseRecorder behaviorRecorder)
+        public BehaviorRecorderUi(Services.BehaviorRecorder behaviorRecorder)
         {
             _behaviorRecorder = behaviorRecorder;
-            this.KeyPreview = true;
-            this.KeyDown += TriggerRecorderEvent;
+            KeyPreview = true;
+            KeyDown += TriggerRecorderEvent;
+
             InitializeComponent();
-            
+            RecordNameInput.GotFocus += RemovePlaceHolder;
+            RecordNameInput.LostFocus += AddPlaceHolder;
         }
 
         private void StartRecord_Click(object sender, System.EventArgs e)
@@ -38,6 +40,7 @@ namespace BehaviorRecorder
                     $"Points X: {record.Points.X}, Y: {record.Points.Y}, action = {record.BehaviorAction.ToString()}, occur on = {record.Interval}");
             }
 
+            SaveRecordPupop.Visible = true;
             PrintLog($"Record Stop !!");
         }
 
@@ -64,7 +67,7 @@ namespace BehaviorRecorder
         private void Play_Click(object sender, EventArgs e)
         {
             PrintLog("Playing Recorder Start !!");
-            _behaviorRecorder.Play(null);
+            _behaviorRecorder.Play(RecordHistory.SelectedItem.ToString());
             PrintLog("Playing Recorder End !!");
         }
 
@@ -81,8 +84,40 @@ namespace BehaviorRecorder
 
         private void SaveRecord_Click(object sender, EventArgs e)
         {
-            var formPopup = new SaveRecordPopup(_behaviorRecorder, _behaviorRecord);
-            formPopup.Show(this); // if you need non-modal window
+            if (!string.IsNullOrEmpty(RecordNameInput.Text))
+            {
+                _behaviorRecord.Name = RecordNameInput.Text;
+                _behaviorRecorder.SaveRecord(_behaviorRecord);
+            }
+
+            SaveRecordPupop.Visible = false;
+            ReloadRecordHistory();
+        }
+
+        private void ReloadRecordHistory()
+        {
+            RecordHistory.Items.Clear();
+            var recordHistory = _behaviorRecorder.GetRecordHistory();
+            foreach (var record in recordHistory)
+            {
+                RecordHistory.Items.Add(record);
+            }
+        }
+
+        private void RemovePlaceHolder(object sender, EventArgs e)
+        {
+            if (RecordNameInput.Text == "Record name")
+            {
+                RecordNameInput.Text = "";
+            }
+        }
+
+        private void AddPlaceHolder(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(RecordNameInput.Text))
+            {
+                RecordNameInput.Text = "Record name";
+            }
         }
     }
 }

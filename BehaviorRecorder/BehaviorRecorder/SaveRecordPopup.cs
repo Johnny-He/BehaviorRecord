@@ -7,12 +7,12 @@ namespace BehaviorRecorder
 {
     public partial class SaveRecordPopup : Form
     {
-        private readonly MouseRecorder _behaviorMouseRecorder;
+        private readonly Services.BehaviorRecorder _behaviorBehaviorRecorder;
         private readonly BehaviorRecord _behaviorRecord;
 
-        public SaveRecordPopup(MouseRecorder behaviorMouseRecorder, BehaviorRecord behaviorRecord)
+        public SaveRecordPopup(Services.BehaviorRecorder behaviorBehaviorRecorder, BehaviorRecord behaviorRecord)
         {
-            _behaviorMouseRecorder = behaviorMouseRecorder;
+            _behaviorBehaviorRecorder = behaviorBehaviorRecorder;
             _behaviorRecord = behaviorRecord;
             InitializeComponent();
             RecordName.GotFocus += RemovePlaceHolder;
@@ -40,7 +40,7 @@ namespace BehaviorRecorder
             if (!string.IsNullOrEmpty(RecordName.Text))
             {
                 _behaviorRecord.Name = RecordName.Text;
-                _behaviorMouseRecorder.SaveRecord(_behaviorRecord);
+                _behaviorBehaviorRecorder.SaveRecord(_behaviorRecord);
                 Close();
             }
         }
