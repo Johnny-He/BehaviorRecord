@@ -21,7 +21,6 @@ namespace BehaviorRecorder.Helpers
         [DllImport("user32.dll")]
         static extern void mouse_event(MouseEventFlag flags, int dx, int dy, uint data, UIntPtr extraInfo);
 
-        //This simulates a left mouse click
         public static void LeftMouseClick(int xPosition, int yPosition)
         {
             SetCursorPos(xPosition, yPosition);
