@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using BehaviorRecorder.Models;
 using BehaviorRecorder.Services;
 
@@ -95,6 +94,7 @@ namespace BehaviorRecorder
 
             SaveRecordPupop.Visible = false;
             ReloadRecordHistory();
+            
         }
 
         private void ReloadRecordHistory()
@@ -105,6 +105,7 @@ namespace BehaviorRecorder
             {
                 RecordHistory.Items.Add(record);
             }
+            RecordHistory.SetSelected(RecordHistory.Items.Count - 1, true);
         }
 
         private void RemovePlaceHolder(object sender, EventArgs e)
@@ -121,6 +122,12 @@ namespace BehaviorRecorder
             {
                 RecordNameInput.Text = "Record name";
             }
+        }
+
+        private void DiscardRecord_Click(object sender, EventArgs e)
+        {
+            _behaviorRecorder.DiscardRecord();
+            SaveRecordPupop.Visible = false;
         }
     }
 }

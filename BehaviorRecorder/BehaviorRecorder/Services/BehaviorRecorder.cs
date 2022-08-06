@@ -144,5 +144,10 @@ namespace BehaviorRecorder.Services
         {
             _behaviorRecorderRepository.SaveRecord(behaviorRecord);
         }
+
+        public void DiscardRecord()
+        {
+            _behaviorRecord.BehaviorWithTimeSpans.Clear();
+        }
     }
 }

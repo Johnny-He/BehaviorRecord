@@ -42,6 +42,7 @@ namespace BehaviorRecorder
             this.RecordNameInput = new System.Windows.Forms.TextBox();
             this.SaveRecordPupop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.DiscardRecord = new System.Windows.Forms.Button();
             this.SaveRecordPupop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +113,6 @@ namespace BehaviorRecorder
             this.RecordHistory.Name = "RecordHistory";
             this.RecordHistory.Size = new System.Drawing.Size(133, 199);
             this.RecordHistory.TabIndex = 9;
-            this.RecordHistory.Items.AddRange(new Services.BehaviorRecorder().GetRecordHistory());
             // 
             // RecordNameInput
             // 
@@ -125,6 +125,7 @@ namespace BehaviorRecorder
             // SaveRecordPupop
             // 
             this.SaveRecordPupop.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.SaveRecordPupop.Controls.Add(this.DiscardRecord);
             this.SaveRecordPupop.Controls.Add(this.label1);
             this.SaveRecordPupop.Controls.Add(this.RecordNameInput);
             this.SaveRecordPupop.Controls.Add(this.SaveRecord);
@@ -142,6 +143,16 @@ namespace BehaviorRecorder
             this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 11;
             this.label1.Text = "Save";
+            // 
+            // DiscardRecord
+            // 
+            this.DiscardRecord.Location = new System.Drawing.Point(135, 42);
+            this.DiscardRecord.Name = "DiscardRecord";
+            this.DiscardRecord.Size = new System.Drawing.Size(87, 23);
+            this.DiscardRecord.TabIndex = 12;
+            this.DiscardRecord.Text = "Discard";
+            this.DiscardRecord.UseVisualStyleBackColor = true;
+            this.DiscardRecord.Click += new System.EventHandler(this.DiscardRecord_Click);
             // 
             // BehaviorRecorderUi
             // 
@@ -175,6 +186,7 @@ namespace BehaviorRecorder
         private System.Windows.Forms.TextBox RecordNameInput;
         private System.Windows.Forms.Panel SaveRecordPupop;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button DiscardRecord;
     }
 }
 
