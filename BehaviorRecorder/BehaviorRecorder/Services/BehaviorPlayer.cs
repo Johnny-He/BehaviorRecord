@@ -1,12 +1,8 @@
 using System;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading;
-using System.Windows.Forms;
 using BehaviorRecorder.Enums;
 using BehaviorRecorder.Helpers;
 using BehaviorRecorder.Repositories;
-using Gma.System.MouseKeyHook;
 
 namespace BehaviorRecorder.Services
 {
