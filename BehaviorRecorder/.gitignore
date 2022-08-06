@@ -456,5 +456,7 @@ $RECYCLE.BIN/
 # ignore after build
 _ReSharper.*
 bin
+bin/*
 obj
+obj/*
 packages
