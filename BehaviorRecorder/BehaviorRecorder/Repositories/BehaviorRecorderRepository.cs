@@ -43,5 +43,11 @@ namespace BehaviorRecorder.Repositories
         {
             return BehaviorRecords.First(record => record.Name == recordName);
         }
+
+        public void DeleteRecord(string recordName)
+        {
+            var behaviorRecord = BehaviorRecords.First(record => record.Name ==  recordName);
+            BehaviorRecords.Remove(behaviorRecord);
+        }
     }
 }
