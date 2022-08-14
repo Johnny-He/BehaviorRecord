@@ -29,7 +29,6 @@ namespace BehaviorRecorder.Repositories
 
         public void SaveRecord(BehaviorRecord record)
         {
-        
             BehaviorRecords.Add(record);
             _path = $"../../../BehaviorRecords.json";
             File.WriteAllText(_path, JsonConvert.SerializeObject(BehaviorRecords,Formatting.Indented));
