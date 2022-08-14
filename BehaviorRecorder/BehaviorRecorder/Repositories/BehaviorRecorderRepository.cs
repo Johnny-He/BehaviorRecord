@@ -26,6 +26,7 @@ namespace BehaviorRecorder.Repositories
             }
             return JsonConvert.DeserializeObject<List<BehaviorRecord>>(readAllText);
         }
+        
         public void SaveRecord(BehaviorRecord record)
         {
             BehaviorRecords.Add(record);
