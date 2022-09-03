@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 using BehaviorRecorder.Enums;
 using BehaviorRecorder.Helpers;
@@ -31,37 +30,14 @@ namespace BehaviorRecorder.Services
         {
             _globalHook = Hook.GlobalEvents();
             //todo when stop record, need to cancel global hook
-            // _globalHook.MouseClick += RecordMouseClickEvent;
-            //shouldn't in constructor
-            // _globalHook.KeyPress += RecordKeyPressEvent;
+            //todo shouldn't in constructor
+             _globalHook.MouseClick += RecordMouseClickEvent;
+             _globalHook.KeyPress += RecordKeyPressEvent;
             _stopwatch = new Stopwatch();
             _lastTimeSpan = new TimeSpan();
             _behaviorRecorderRepository = new BehaviorRecorderRepository();
         }
 
-     
-
-        public void Play(string recordName)
-        {
-            var recordByName = _behaviorRecorderRepository.GetRecordByName(recordName);
-            foreach (var record in recordByName.BehaviorWithTimeSpans)
-            {
-                Thread.Sleep(record.Interval);
-                switch (record.BehaviorAction)
-                {
-                    case BehaviorAction.MouseMove:
-                        WindowsBehaviorHelper.SetCursorPos(record.Points.X, record.Points.Y);
-                        break;
-                    case BehaviorAction.MouseClick:
-                        WindowsBehaviorHelper.LeftMouseClick(record.Points.X, record.Points.Y);
-                        break;
-                    case BehaviorAction.KeyPress:
-                        
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
-        }
 
         public void StartRecord()
         {
